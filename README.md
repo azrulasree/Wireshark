@@ -2,22 +2,27 @@
 
 Course on David Bombal 
 https://courses.davidbombal.com/courses/1714194/lectures/38892909
+Course on CBTNugget
 
-=========================
-#Need to Personalise wireshark:
+Course on Youtube;
+
+
+Personally the best course are in David Bombal's website taught by Christ
+
+## Need to Personalise wireshark:
 To analyse application
 To analyse security
 To troubleshoot network
 To analyse TCP
 
-#Preference
+### Preference
 to custom wireshark
 'edit > preference'
 
-======
-Trick:
 
-#time
+## Trick:
+
+### time
 WWW.XXXYYYZZZZ
 w = second
 x = millisec
