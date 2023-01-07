@@ -1,5 +1,5 @@
 # DNS
-A = IPV4
+A = IPV4.
 AAAA = IPV6
 
 ![image](https://user-images.githubusercontent.com/83261924/211143656-2cef07c5-ad0e-4a5a-9010-2c4e547da011.png)
