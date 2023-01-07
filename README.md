@@ -29,40 +29,40 @@ x = millisec
 y = microsec
 z = nanosec
 
-#statistic > endpoints
+### statistic > endpoints
 
-#statistic > conversation
+### statistic > conversation
 summary off all pcap conversation captured 
 port tuple
 sort by highest bytes
 
-# [information Wireshark]
+### [information Wireshark]
 square bracket is a information provided by wireshark
 
 
-#Coloring rule
+### Coloring rule
 custom colour for packet
 
- #edit pane 3 --> RFC
+ ### edit pane 3 --> RFC
  'edit > preference > layout > pane3 > select packet diagram'
  
 
 
- #after filter IP address
+ ### after filter IP address
  'statistics > endpoints > tick limit to display filter'
  
- #follow 1 set of conversation
+ ### follow 1 set of conversation
  'packet > right click > conversation filter > TCP/ethernet '
  
 
 
 --------------
-#Add column
+###Add column
 to view delay --> add "Delta" column to profile
 Wireshark > view > Time Display Format > Seconds since previous displayed packet
 
 -------------
-#Add TTL as column
+###Add TTL as column
 
 See TTL of every packet.
 In layer 4. > right click > apply as column
@@ -70,7 +70,7 @@ In layer 4. > right click > apply as column
 
 
 ======
-#Filter
+## Filter
 green --> worked
 red --> filter got error
 yellow --> filter might work but might not be the one I want to filter
@@ -88,18 +88,18 @@ specific:		tcp.flags.syn==1
 
 
 
-#to see active traffic use by the ip address
+### to see active traffic use by the ip address
 statistic > endpoints > limit to display filter
 
-#shortcut for filter
+### shortcut for filter
 filter section > most right > add new filter
  
-#conversation filter
+### conversation filter
 ping 192.168.1.1 -l 1600 //need to try
 
 
 ======
-#Operator
+## Operator
 eq		==
 not		!
 or		||
@@ -120,14 +120,14 @@ http.request.method in {GET,POST}	//GET or POST request method
 (tcp.flags == 0x012) and ip.src == 10.0.2.15 // find SYN ACK flag + source IP 
 
 =====================
-#Before start capturing:
+## Before start capturing:
 1. application the access
 2. where the server
 3. network path
 4. how many affected
 5. what the error
 
-#Way to capture packet:
+## Way to capture packet:
 1. install wireshark in server
 pros: easiest way. final option to have more direct view of what happen
 cons: more workload on server
@@ -140,20 +140,20 @@ cons: overprovision. SPAN port cant handle too many port mirror to it.
 3. TAP
 seperated hardware for analysis packet. install between link that we want to capture.
 
-#capture option
+### capture option
 promiscuous - to let our packet not to capture unicast coming to the device
 snaplen 	- if involve sensative data. will ignore the payload. can set to just capture packet header.
 
-#long term capture --> using ring-buffer
+### long term capture --> using ring-buffer
 intermittent Issue
 capture option > output > save file fill > tick  create new file automatically > after: 500 mbps > use ring buffer with 100 files.
 
-#ping with max mtu
+### ping with max mtu
 ping 8.8.8.8 -s  1600 //ping with 1600bytes
 
 
 ======================
-#capture using CMD
+### capture using CMD
 'dumpcap'
 'dumpcap -D' //with interface option 
 'dumpcap -i 1' //with interface option 1
@@ -165,10 +165,10 @@ ctrl + c --> to end capture
 maxmar database --> geolocation
 
 =====================
-#RFC
+## RFC
 8 bit = 1 byte
 =====================
-#Anatomy of Packet
+## Anatomy of Packet
 packet and protocol
 OSI and TCP/IP
 
